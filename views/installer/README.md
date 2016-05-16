@@ -1,0 +1,1 @@
+# Install template directory.

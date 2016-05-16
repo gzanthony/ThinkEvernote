@@ -1,0 +1,21 @@
+### Composer template
+composer.phar
+/vendor/
+
+# Commit your application's lock file http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file
+# You may choose to ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file
+# composer.lock
+
+/.idea/ThinkEvernote.iml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/vcs.xml
+/.idea/workspace.xml
+# Created by .ignore support plugin (hsz.mobi)
+.DS_Store
+*~
+*.swp
+/runtime/cache
+/runtime/log
+/runtime/temp
+/runtime/template
