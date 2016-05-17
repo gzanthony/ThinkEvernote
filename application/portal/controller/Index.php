@@ -17,9 +17,17 @@
 
 namespace app\portal\controller;
 
+use think\Controller;
 
-class Index
-{
+class Index extends Controller {
+
+    public function _initialize() {
+        if (!file_exists(PRIVATE_PATH . 'install.lock')) {
+            header("Location: install.php");
+            die;
+        }
+    }
+
     public function index() {
         echo "Hello World!";
     }

@@ -17,6 +17,9 @@
 
 return [
     'template' => [
-        'view_path' => __DIR__ . '/../views/installer' // 默认模板目录
+        'view_path' => WEBROOT_PATH . '/../views/installer' // 默认模板目录
     ],
+    'deny_module_list' => [COMMON_MODULE, 'runtime', 'portal'],  // 禁止访问模块
+    'dispatch_success_tmpl'  => THINK_PATH . 'tpl' . DS . 'dispatch_jump.tpl',
+    'dispatch_error_tmpl'    => THINK_PATH . 'tpl' . DS . 'dispatch_jump.tpl',
 ];

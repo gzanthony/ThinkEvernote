@@ -17,10 +17,30 @@
 
 namespace app\installer\controller;
 
+class Index extends Common {
 
-class Index
-{
     public function index() {
-        echo "i'm installer controller.";
+
+        if (!file_exists(PRIVATE_PATH)) {
+            return $this->error(PRIVATE_PATH . ' 文件夹不存在', null, '', -1);
+        }
+
+        if (!is_writable(WEBROOT_PATH . '/../datas')) {
+            return $this->error(WEBROOT_PATH . '/../datas' . ' 文件夹不可写入!', null, '', -1);
+        }
+
+        if (!extension_loaded('xsl')) {
+            return $this->error('缺少 PHP XSL 扩展!', null, null, -1);
+        }
+
+        if (!extension_loaded('curl')) {
+            return $this->error('缺少 PHP CURL 扩展!', null, null, -1);
+        }
+
+        return \think\Response::create()->isExit(true)->location('install.php?s=step1');
+    }
+
+    public function step1() {
+        echo 'here is step1.';
     }
 }

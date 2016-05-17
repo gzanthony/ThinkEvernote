@@ -18,7 +18,7 @@
 namespace app\installer\controller;
 
 
-class step1
+class Step1
 {
     public function index() {
         echo "This is step1.";

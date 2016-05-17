@@ -10,12 +10,21 @@
 /**
  * Created by ThinkEvernote.
  * User: mac01
- * Time: 16/5/16 15:02
+ * Time: 16/5/17 17:13
  * License: Apache 2.0
  * EMail: cngzwing@vip.163.com
  */
 
-require 'init.php';
+namespace app\installer\controller;
 
-// 加载 ThinkPHP 5.0 类库
-require THINK_PATH . "start.php";
+use think\Config;
+use think\Controller;
+
+class Common extends Controller {
+
+    public function _initialize() {
+        $template_path = Config::get('template.view_path');
+        Config::set('dispatch_success_tmpl', $template_path . DS . 'dispatch_jump.tpl');
+        Config::set('dispatch_error_tmpl', $template_path . DS . 'dispatch_jump.tpl');
+    }
+}

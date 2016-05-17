@@ -23,10 +23,10 @@ return [
     ],
     'default_module' => 'portal', // 默认模块
     'template' => [
-        'view_path' => __DIR__ . '/../views/default/portal' // 默认模板目录
+        'view_path' => WEBROOT_PATH . '/../views/default/portal' // 默认模板目录
     ],
     'default_timezone' => 'Asia/Chongqing',  // 默认区时
     'session' => [
         'prefix' => 'te' // session 前缀
-    ]
+    ],
 ];

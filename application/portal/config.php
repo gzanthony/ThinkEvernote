@@ -10,12 +10,11 @@
 /**
  * Created by ThinkEvernote.
  * User: mac01
- * Time: 16/5/16 15:02
+ * Time: 16/5/17 12:08
  * License: Apache 2.0
  * EMail: cngzwing@vip.163.com
  */
 
-require 'init.php';
-
-// 加载 ThinkPHP 5.0 类库
-require THINK_PATH . "start.php";
+return [
+    'deny_module_list' => [COMMON_MODULE, 'runtime', 'installer'],  // 禁止访问模块
+];
